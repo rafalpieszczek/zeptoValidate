@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Task 1</title>
+	<script src="./zeptoValidate.js" type="text/javascript"></script>
+	<script>
+		$(function() {
+			$('#formSubmit').validate(1);
+		});
+	</script>
+	
+	<style>
+		body { font-family:arial; font-size:12px; }
+		#container {  width:400px; }
+		#errors { clear:both; border:1px solid red; padding:10px; display:none;margin-bottom:5px;}
+		#btnGo { width:100%;padding:5px;}
+		.row { clear:both; display:block; margin-bottom:5px; height:20px; }
+		.row label { float:left; width:145px;}
+		.row input { float:left; width:250px; border:1px solid black;}
+		.row div.error { float:right; color:red; clear:both;}
+		.row input.error { border:1px solid red; background:yellow; }
+	</style>
+</head>
+<body>
+<div id="container">
+<h1>Subscription form</h1>
+<form method="POST" id="formSubmit">
+	<div class="row">
+		<label for="inputName"><span>Name</span>*:</label>
+		<input id="inputName" name="inputName" type="text" class="required" />
+	</div>	
+	<div class="row">
+		<label for="inputFirstName"><span>First Name</span>*:</label>
+		<input id="inputFirstName" name="inputFirstName" type="text" class="required" />
+	</div>	
+	<div class="row">
+		<label for="inputZip"><span>ZIPCODE</span>:</label>
+		<input id="inputZip" name="inputZip" type="text" class="postal" />
+	</div>	
+	<div class="row">
+		<label for="inputPhone"><span>Phone</span>:</label>
+		<input id="inputPhone" name="inputPhone" type="text" class="phone" />
+	</div>	
+	<div class="row">
+	<label for="inputCity"><span>City</span>:</label>
+	<input id="inputCity" name="inputCity" type="text" />
+	</div>	
+	<div class="row">
+		<label for="inputEmail"><span>E-mail</span>*:</label>
+		<input id="inputEmail" name="inputEmail" type="text" class="required email" />
+	</div>	
+	<div class="row">
+		<input type="submit" value="Submit" id="btnGo" />
+	</div>
+</form>
+</div>
+</body>
+</html>
